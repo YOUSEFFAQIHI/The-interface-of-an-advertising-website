@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    background: #000;
+    min-height: 100vh; /*يستخدم لجعل اللون على كامل الصفحه*/
+    width: 100%;
+    overflow: hidden;/* في حال خروج اي شي من الاب يسوي له اخفاء*/
+    position: relative;/* تحفظ المكان الاصلي وتتحرك حسب الاوامر ,تمت اضافتهابسبب السطر 67*/
+}
+header{
+    display: flex;/* يجعل العناصر في المنتصف*/
+    justify-content: space-between;/* يجعل فاصل بين العناصر مثل الاقائمه والصوره في الناف بار او غيره*/
+    align-items: center;/*تجعل جميع العناصر داخل الاب على سطر واحد*/
+    width: 80%;/*يجعل الالنفبار يقترب من المنتصف */
+    margin: auto;
+    padding: 20px 0;
+}
+.logo{
+    width: 40px;
+}
+ul li{
+    display: inline-block;/* تعدل العناصر الي انلاين وتشيل النقاط السوداء*/
+    list-style: none;/* تبعد الدوائر السوداء من الرابط بس هنا ما تحتاجها*/
+}
+ul li a{
+   color: #fff;
+   text-decoration: none;/*تبعد الخط من تحت الروابط*/
+   margin:0 10px ;
+}
+.content{
+    display: flex;/* تجعل العناصر في المنتصف*/
+    justify-content: space-between;/*تجعل مسافه قي المنتصف بين العناصر */
+    align-items: center;/*يجعل الكتابه في منتصف الاب */
+    width: 80%;
+    margin: auto;
+}
+.content .txt{
+    width: 40%;/*تمت كتابة العرض وهو عرض الاب ليكون له حد ولا يوصل على الصوره */
+    color: #fff;
+}
+.content .txt h2{
+    font-size: 40px;
+    text-transform: uppercase;/* تجعل الحروف كبتل*/
+}
+.content .txt p{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.content .txt a{
+    text-decoration: none;/* لمسح الخط من تحت الرابط*/
+    background: #fff;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+.content .image{
+    width: 30%;
+
+}
+.content .image img{
+    width: 180px;
+}
+.icons{
+   position: absolute;/*تمت اضافته بسبب السطر 11 لكي يتحرك على حجم الاب */ 
+   bottom: 20px;/* يجعل الصور كلها في الاسفل (ليس الصور فقط)*/
+   left: 50%;/* تحرك الصور لليمين*/
+   transform: translate(-50%);/*للتحريك كذا تخليها تروح للنص */
+
+}
+.icons img{
+    width: 40px;
+    margin: 5px;
+    transition: 0.5s;/*عند لمس الصوره تكون سرعتها ممتازه*/
+}
+.icons img:hover{
+    transform: scale(1.2);/*عند اللمس تكبر عن الحجم الطبيعي بمقدار*/
+   
+}
